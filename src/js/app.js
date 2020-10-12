@@ -31,7 +31,7 @@ App = {
       // Connect provider to interact with contract
       App.contracts.Election.setProvider(App.web3Provider);
 
-      //  App.listenForEvents();
+       App.listenForEvents();
 
       return App.render();
     });
@@ -47,7 +47,7 @@ App = {
         fromBlock: 0,
         toBlock: 'latest'
       }).watch(function(error, event) {
-        console.log("event triggered", event)
+        console.log("event triggered", event);
         // Reload when a new vote is recorded
         App.render();
       });
